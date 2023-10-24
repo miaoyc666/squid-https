@@ -31,3 +31,8 @@ services:
 ```bash
 https://hub.docker.com/r/miaoyc/squid
 ```
+
+### github
+```bash
+https://github.com/miaoyc666/squid-https
+```
