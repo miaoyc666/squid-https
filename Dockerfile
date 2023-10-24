@@ -12,6 +12,8 @@ RUN set -x \
     && apt install -y unzip \
     && apt clean \
     && unzip squid.zip -d /usr/local/ \
-    && rm squid.zip 
+    && rm squid.zip \
+    && mkdir -p /var/log/squid \
+    && chmod 777 /var/log/squid
 
-CMD ["/home/s/apps/squid/bin/squid -f /home/s/apps/squid/conf/squid.conf"]
+CMD ["/home/s/apps/squid/bin/squid", "-f", "/home/s/apps/squid/conf/squid.conf", "-NYC"]
