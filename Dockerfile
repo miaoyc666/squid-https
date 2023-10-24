@@ -6,17 +6,12 @@ COPY . .
 RUN set -x \
     && echo "Asia/Shanghai" > /etc/timezone \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-    && cp -f sources.list /etc/apt/ \
+    && cp -f conf/sources.list /etc/apt/ \
     && apt update \
-    && apt install libltdl-dev \
-    && apt install unzip \
+    && apt install -y libltdl-dev \
+    && apt install -y unzip \
     && apt clean \
     && unzip squid.zip -d /usr/local/ \
     && rm squid.zip 
 
 CMD ["/home/s/apps/squid/bin/squid -f /home/s/apps/squid/conf/squid.conf"]
-
-
-
-
-
