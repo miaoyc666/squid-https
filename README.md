@@ -26,3 +26,8 @@ services:
       - ./certs/proxy.happycode.fun.key:/home/s/apps/squid/certs/proxy.happycode.fun.key
       - ./log:/var/log/squid
 ```
+
+### docker hub
+```bash
+https://hub.docker.com/r/miaoyc/squid
+```
